@@ -1,13 +1,13 @@
 
 name: Yuhang Chen
 
-description: My page
+description: My Blogs
 
 navigation:
-  - name: My posts
-    url: /
   - name: About
     url: /about
+  - name: Blogs
+    url: /
   - name: Archive
     url: /archive
   - name: Tags
@@ -24,8 +24,6 @@ footer-links:
   github: realcyh
 
 footer-text: Copyright (c) 2019 realcyh
-
-# url: https://realcyh.github.io/yuhang-chen/
 
 
 #
