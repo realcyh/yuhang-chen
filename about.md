@@ -1,11 +1,11 @@
 ---
 layout: page
-title: About
+title: About Me
 date: 2019-12-05
-Author: Yuhang Chen
+Author: realcyh
 permalink: /about/
 ---
-## Hey it's me!
+### Hey it's Yuhang Chen!
 
 ## Education
 
