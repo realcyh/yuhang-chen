@@ -15,10 +15,10 @@ description: My page
 
 # 菜单中的按钮
 navigation:
+  - name: My posts
+    url: /
   - name: About
     url: /about
-  - name: My posts
-    url: /_posts
   - name: Archive
     url: /archive
   - name: Tags
