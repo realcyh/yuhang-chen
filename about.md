@@ -1,7 +1,10 @@
 ---
 layout: page
-title: 关于
+title: About
 permalink: /about/
 ---
+# Hey it's me!
 
-这是一个关于页面，请编辑about.md以介绍你的博客。
+# Education
+
+Master of Science in Electrical and Computer Engineering @ GaTech
