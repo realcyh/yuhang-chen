@@ -12,6 +12,7 @@ permalink: /about/
 Master of Science in Electrical and Computer Engineering @ GaTech
 
 Bachelor of Engineering in Information Engineering @ SCUT
+
 Bachelor of Economics in Finance @ SCUT
 
 ## Skills
@@ -43,5 +44,4 @@ Georgia Tech Student Foundation @ GaTech
 SCUT Volunteer Group @ SCUT
 
 Student Union @ SCUT
-
 
