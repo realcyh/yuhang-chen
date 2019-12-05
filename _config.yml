@@ -4,7 +4,7 @@ name: Yuhang Chen
 description: My Blogs
 
 navigation:
-  - name: About
+  - name: Me
     url: /about
   - name: Blogs
     url: /
