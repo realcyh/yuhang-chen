@@ -5,7 +5,7 @@ description: My Blogs
 
 navigation:
   - name: Me
-    url: /about
+    url: /me
   - name: Blogs
     url: /
   - name: Archive
