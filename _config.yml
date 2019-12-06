@@ -5,6 +5,8 @@ description: My Blogs
 
 avatar: https://raw.githubusercontent.com/realcyh/yuhang-chen/master/images/mypic.jpeg
 
+favicon: https://raw.githubusercontent.com/realcyh/yuhang-chen/master/images/cyh.jpg
+
 navigation:
   - name: Me
     url: /about
