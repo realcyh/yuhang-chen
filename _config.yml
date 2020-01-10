@@ -10,7 +10,7 @@ favicon: https://raw.githubusercontent.com/realcyh/yuhang-chen/master/images/Sli
 
 navigation:
   - name: Me
-    url: /about
+    url: /me
   - name: Blogs
     url: /
   - name: Archive
