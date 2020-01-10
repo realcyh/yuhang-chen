@@ -6,6 +6,8 @@ Author: realcyh
 permalink: /me/
 ---
 
+new
+
 ### Hey it's Yuhang Chen!
 
 ## Education
