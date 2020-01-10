@@ -1,12 +1,10 @@
 ---
 layout: page
-title: Me
+title: About Me
 date: 2020-01-9
 Author: realcyh
 permalink: /me/
 ---
-
-new
 
 ### Hey it's Yuhang Chen!
 
