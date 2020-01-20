@@ -18,11 +18,13 @@ Bachelor of Economics in Finance @ SCUT
 
 ## Skills
 
-Java / C / Matlab / Python / MySQL / VHDL
+Java / C / Python / SQL / Matlab / VHDL
+
+MySQL / Maven / Git / Swing / Flask / Jupyter Notebook / XCode
 
 ## Experience
 
-Intern @ SMBC
+Technical Support Engineer Intern @ SMBC
 
 ## Projects
 
