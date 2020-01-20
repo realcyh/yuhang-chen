@@ -14,7 +14,7 @@ Master of Science in Electrical and Computer Engineering @ GaTech
 
 Bachelor of Engineering in Information Engineering @ SCUT
 
-Bachelor of Economics in Finance @ SCUT
+Bachelor of Economics in Finance (double degree) @ SCUT
 
 ## Skills
 
@@ -23,6 +23,8 @@ Java / C / Python / SQL / Matlab / VHDL
 MySQL / Maven / Git / Swing / Flask / Jupyter Notebook / XCode
 
 ## Experience
+
+Incoming Software Development Engineer Intern @ Amazon
 
 Technical Support Engineer Intern @ SMBC
 
