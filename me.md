@@ -20,7 +20,7 @@ Bachelor of Economics in Finance (double degree) @ SCUT
 
 Java / C / Python / SQL / Matlab / VHDL
 
-MySQL / Maven / Git / Swing / Flask / Jupyter Notebook / XCode
+MySQL / SQLite / Swing / Maven / Git / Flask / Jupyter Notebook / XCode
 
 ## Experience
 
