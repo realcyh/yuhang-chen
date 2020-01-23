@@ -1,0 +1,18 @@
+---
+layout: post
+title: Dynamic Programming
+date: 2020-01-23
+Author: realcyh
+tags: [algorithms]
+---
+
+## Example
+
+Consider the following game. You are given a sequence of $n$ positive numbers
+$(a_1, a_2, ..., a_n)$. Initially, they are all colored black. At each move,
+you choose a black number $a_k$ and color it and its immediate neighbors (if
+any) red (the immediate neighbors are the elements $a_{k-1}$, $a_{k+1}$ ). You
+get $a_k$ points for this move. The game ends when all numbers are colored
+red. The goal is to get as many points as possible.
+
+Describe and analyze an efficient dynamic programming algorithm for this problem that runs in O(n) and returns optimal solutions. (9 pts)
