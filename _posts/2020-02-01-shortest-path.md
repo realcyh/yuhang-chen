@@ -10,7 +10,7 @@ tags: [algorithms]
 ## Bellman-Ford algorithm
 
 The Bellman-Ford algorithm is a fundamental way to compute the shortest paths from one source to all of the other edges 
-in a weighted graph. The basic idea of Bellman-Ford algorithm is Relaxation, that is, the approximations to the correct 
+in a weighted graph. The basic idea of Bellman-Ford algorithm is **Relaxation**, that is, the approximations to the correct 
 distance are replaced with better ones until they eventually reach the solution. It simply relaxes all the edges each 
 time and does this $|V|-1$ times, where $|V|$ is the number of vertices in the graph. The time complexity is $O(|V||E|)$.
 
@@ -36,15 +36,14 @@ Bellman-Ford:
 The Dijkstra's algorithm is a faster way to compute the shortest paths from one source to all of the other edges in 
 a weighted graph. It can also be used for finding the shortest path from a single source to a single destination by 
 stopping the proceed once the shortest path to the destination has been determined. The basic idea of Dijkstra's 
-algorithm is also Relaxation, but it use a priority queue to greedily choose the closest vertex that has not been 
+algorithm is also **Relaxation**, but it use a priority queue to greedily choose the closest vertex that has not been 
 proceeded yet and perform relaxation process on all of its outgoint edges. So we use a set $S$ to maintain all the 
 vertices that have already been processed and the shortest path to that vertex has been computed, and another set $Q$ 
 to maintain the remainint vertices. 
 
-The time complexity mainly depends on the data structure we use. If we simply 
-use a list or an array to store the distances, the time complexity will be $O(|V|^2)$, since each time, we have to 
-linearly search the list or array to find the vertex with smallest distance in $Q$. If we use a binary heap, the time 
-complexity will be $O((|V|+|E|)log(|V|))$.
+The time complexity mainly depends on the data structure we use. If we simply use a list or an array to store the 
+distances, the time complexity will be $O(|V|^2)$, since each time, we have to linearly search the list or array to find 
+the vertex with smallest distance in $Q$. If we use a binary heap, the time complexity will be $O((|V|+|E|)log(|V|))$.
 
 ```
 // pseudocode
