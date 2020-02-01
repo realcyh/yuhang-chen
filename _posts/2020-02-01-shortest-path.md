@@ -18,7 +18,7 @@ The time complexity is $O(|V||E|)$.
 
 ```
 // pseudocode
-Bellman-Ford :
+Bellman-Ford:
 // initialize
 	for each vertex v in vertices:
 		distance[v] = inf
