@@ -7,6 +7,8 @@ toc: true
 tags: [algorithms]
 ---
 
+# test
+
 ## Bellman-Ford algorithm
 
 The Bellman-Ford algorithm is a fundamental way to compute the shortest paths from one source to all of the other edges 
@@ -30,6 +32,10 @@ Bellman-Ford:
 				distance[v] = distance[u] + weight(u,v)
 				predecessor[v] = u
 ```
+
+### test2
+
+# test3
 
 ## Dijkstra's algorithm
 
