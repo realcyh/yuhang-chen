@@ -14,6 +14,8 @@ in a weighted graph. The basic idea of Bellman-Ford algorithm is Relaxation, tha
 distance are replaced with better ones until they eventually reach the solution. It simply relaxes all the edges each 
 time and does this $|V|-1$ times, where $|V|$ is the number of vertices in the graph. 
 
+The time complexity is $O(|V||E|)$.
+
 ```
 // pseudocode
 Bellman-Ford:
