@@ -12,9 +12,7 @@ tags: [algorithms]
 The Bellman-Ford algorithm is a fundamental way to compute the shortest paths from one source to all of the other edges 
 in a weighted graph. The basic idea of Bellman-Ford algorithm is Relaxation, that is, the approximations to the correct 
 distance are replaced with better ones until they eventually reach the solution. It simply relaxes all the edges each 
-time and does this $|V|-1$ times, where $|V|$ is the number of vertices in the graph. 
-
-The time complexity is $O(|V||E|)$.
+time and does this $|V|-1$ times, where $|V|$ is the number of vertices in the graph. The time complexity is $O(|V||E|)$.
 
 ```
 // pseudocode
