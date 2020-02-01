@@ -31,12 +31,6 @@ Bellman-Ford:
 				predecessor[v] = u
 ```
 
-### test2
-
-# test3
-
-### test4
-
 ## Dijkstra's algorithm
 
 The Dijkstra's algorithm is a faster way to compute the shortest paths from one source to all of the other edges in 
