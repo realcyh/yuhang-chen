@@ -15,6 +15,7 @@ distance are replaced with better ones until they eventually reach the solution.
 time and does this $|V|-1$ times, where $|V|$ is the number of vertices in the graph. The time complexity is $O(|V||E|)$.
 
 ```
+<font size=10px>
 // pseudocode
 Bellman-Ford:
 // initialize
@@ -29,6 +30,7 @@ Bellman-Ford:
 			if distance[u] + weight(u,v) < distance[v]:
 				distance[v] = distance[u] + weight(u,v)
 				predecessor[v] = u
+</font>
 ```
 
 ## Dijkstra's algorithm
