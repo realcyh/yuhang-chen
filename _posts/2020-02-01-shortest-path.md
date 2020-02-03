@@ -17,13 +17,13 @@ time and does this $|V|-1$ times, where $|V|$ is the number of vertices in the g
 ```
 // pseudocode
 Bellman-Ford:
-// initialize
+	// initialize
 	for each vertex v in vertices:
 		distance[v] = inf
 		predecessor[v] = null
 	distance[source] = 0
 
-// relaxation
+	// relaxation
 	for i in range(size(vertices)-1):
 		for each edge (u, v) in edges:
 			if distance[u] + weight(u,v) < distance[v]:
@@ -48,7 +48,7 @@ the vertex with smallest distance in $Q$. If we use a binary heap, the time comp
 ```
 // pseudocode
 Dijkstra:
-// initialize
+	// initialize
 	for each vertex v in vertices:
 		distance[v] = inf
 		predecessor[v] = null
@@ -56,7 +56,7 @@ Dijkstra:
 	S = {} // empty set
 	Q = {vertices} // set of all vertices
   
-// relaxation
+	// relaxation
 	while Q is not empty:
 		u = vertex with minimum distance value in Q
 		S.append(u)
