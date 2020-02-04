@@ -221,7 +221,9 @@ tbody tr:nth-child(odd) th {
 
 // Code
 pre, code {
-	font-size: 10px;    // $small-font-size;
+	font-size: $small-font-size;
+	line-height: 1.5;
+	
 }
 
 // Blockquote
