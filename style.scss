@@ -219,6 +219,11 @@ tbody tr:nth-child(odd) th {
   background-color: $table-background-color;
 }
 
+// Code
+code {
+	font-size:$small-font-size;
+}
+
 // Blockquote
 blockquote {
   font-weight: 300;
