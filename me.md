@@ -18,9 +18,9 @@ Bachelor of Economics in Finance (double degree) @ SCUT
 
 ## Skills
 
-Java / C / Python / SQL / Matlab / VHDL
+Java / Python / C / SQL / JavaScript / HTML / CSS / Matlab / VHDL
 
-MySQL / SQLite / Swing / Maven / Git / Flask / Jupyter Notebook / XCode
+MySQL / SQLite / D3.js / Swing / Flask / Maven / Git / Jupyter Notebook / XCode
 
 ## Experience
 
@@ -30,11 +30,15 @@ Technical Support Engineer Intern @ SMBC
 
 ## Projects
 
-Atlanta Movie Station (Java + MySQL)
+Game AI (Python)
+
+Alexa Top 1M Websites Analysis (Python)
+
+Atlanta Movie Station GUI (Java + MySQL)
 
 Discrete Event Simulation (C)
 
-Intelligent Voice Assistant Based on Wechat Applet (Python + Javascript)
+Intelligent Voice Assistant Based on Wechat Applet (Python + JavaScript)
 
 Snake Game and Automatic Digital Clock Based on FPGA (VHDL)
 
