@@ -32,19 +32,19 @@ Protocols can be broadly classified as connectionless and connection oriented.
 
 * Connection-less network protocols
 
-Sends data out as soon as there is enough data to be transmitted.
+  Sends data out as soon as there is enough data to be transmitted.
 
-E.g., user datagram protocol (UDP).
+  E.g., user datagram protocol (UDP).
 
 * Connection-oriented network protocols
 
-Provides a reliable connection stream between two nodes.
+  Provides a reliable connection stream between two nodes.
 
-Consists of set up, transmission, and tear down phases.
+  Consists of set up, transmission, and tear down phases.
 
-Creates virtual circuit-switched network.
+  Creates virtual circuit-switched network.
 
-E.g., transmission control protocol (TCP).
+  E.g., transmission control protocol (TCP).
 
 #### Network Layers
 
