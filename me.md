@@ -32,7 +32,7 @@ Technical Support Engineer Intern @ SMBC
 
 Game AI (Python)
 
-Alexa Top 1M Websites Analysis (Python)
+Travel Schedule Application (JavaScript + Java + Python)
 
 Atlanta Movie Station GUI (Java + MySQL)
 
