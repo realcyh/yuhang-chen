@@ -32,7 +32,7 @@ Technical Support Engineer Intern @ SMBC
 
 Game AI (Python)
 
-Travel Schedule Application (JavaScript + Java + Python)
+[Travel Schedule Application (JavaScript + Java + Python)](https://realcyh.github.io/yuhang-chen/travel-app/)
 
 Atlanta Movie Station GUI (Java + MySQL)
 
