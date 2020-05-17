@@ -24,7 +24,7 @@ MySQL / SQLite / D3.js / Swing / Flask / Maven / Git / Jupyter Notebook / XCode
 
 ## Experience
 
-Incoming Software Development Engineer Intern @ Amazon
+Software Development Engineer Intern @ Amazon
 
 Technical Support Engineer Intern @ SMBC
 
