@@ -7,7 +7,7 @@ tags: [projects]
 ---
 
 
-We developed a map application that can visualize multiple traffic information and can predict traffic conditions and traveling time using machine learning techniques in Atlanta for users and help them figure out when to set off will be the best. Here is a [DEMO VIDEO](https://www.youtube.com/watch?v=zzuPhJ_puPo&t=24s) of our APP.
+We developed a map application that can visualize multiple traffic information and can predict traffic conditions and traveling time using machine learning techniques in Atlanta for users and help them figure out when to set off will be the best. Here is a [DEMO VIDEO](https://www.youtube.com/watch?v=zzuPhJ_puPo) of our APP.
 
 
 ## Frontend Visualization
