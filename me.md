@@ -36,7 +36,7 @@ Game AI (Python)
 
 Atlanta Movie Station GUI (Java + MySQL)
 
-Discrete Event Simulation (C)
+[Discrete Event Simulation (C)](https://realcyh.github.io/yuhang-chen/des/)
 
 Intelligent Voice Assistant Based on Wechat Applet (Python + JavaScript)
 
