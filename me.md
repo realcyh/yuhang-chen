@@ -34,7 +34,7 @@ Game AI (Python)
 
 [Travel Schedule Application (JavaScript + Java + Python)](https://realcyh.github.io/yuhang-chen/travel-app/)
 
-Analysis of Chan-Vese Segmentation (Matlab) 
+[Analysis of Chan-Vese Segmentation (Matlab)]((https://realcyh.github.io/yuhang-chen/chan-vese/)
 
 Atlanta Movie Station GUI (Java + MySQL)
 
