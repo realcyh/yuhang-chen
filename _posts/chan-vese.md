@@ -1,0 +1,159 @@
+---
+layout: post
+title: Analysis of Chan-Vese Segmentation
+date: 2020-4-21
+Author: realcyh
+tags: [projects]
+---
+
+## Introduction
+Segmentation is the process of partitioning a digital image into multiple meaningful sections which is useful in many areas. There are many classical methods to implement image segmentation such as thresholding according to the image intensity, clustering and edge detection like Canny edge detecter.
+
+While many segmentation methods rely heavily in some way on edge detection, the Chan-Vese model for active contours ignores edges completely[1]. The model is based on an energy minimization problem, which can be reformulated in the level set formulation, leading to an easier way to solve the problem. And it is based on Mumford-Shah functional for segmentation[2]. 
+
+In this paper, we will also do some experiments on different images and different pair of parameters to test performance of this algorithm and talk about the strengths, weaknesses and potential future improvements.
+
+
+
+
+## Algorithm in Pseudo Code
+The basic implementation of the Chan-Vese model can be described as follows:
+1. Initialize $\lambda_1, \lambda_2, \mu, \nu, \Delta t$.
+2. Initialize $\psi^0$ with a desired shape and location for the contour.
+3. Use the region defined by the current contour to compute the average intensity $\mu, \nu$.
+4. Calculate $\psi_t$.
+5. Calculate $\psi^{n+1} = \psi^n + \Delta t\cdot \psi_t$ to evolve contour.
+6. Check whether the solution is stationary, if not, repeat step 3 - 5, else stop.
+
+
+In this paper, in order to simplify the code, we set $\Delta x = \Delta y = 1$. Applying this to the CFL condition in (\ref{cfl}), we have $\Delta t \leq 0.5$. So we set $\Delta t = 0.1$. For the remaining parameters in step 1, we will first set the default value as $\lambda_1 = \lambda_2 = 1, \mu = 0.5, \nu = 0$. We will then discuss the results of choosing different pairs of parameters.
+
+
+## Experimental Results
+### Performance on Regular Images
+First, we applied the Chan-Vese model with default parameters to a picture of "Leonardo" and recorded the contour derived by each iteration as shown below.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{leo.png}
+\caption{Chan-Vese Algorithm on "Leonardo"}
+\label{fig-leo}
+\end{figure}
+
+From the evolution of the contour, we can see that only after five iterations, we can obtain an overall contour of the image. And the result is quite good.
+
+Since in Chan-Vese model, at each step, our goal is to minimize the energy funcitonal (\ref{efunctional}), we can further examine this model, we then look at the evolution of energy after each iteration. As shown in Figure \ref{fig-leoenergy}, we can see that there is a sharp drop between the third and fifth iterations which corresponds to the fully evolving of the contour, we can also see that after six rounds of iterations, the energy becomes stable.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{leoenergy.png}
+\caption{Energy Evolution on "Leonardo"}
+\label{fig-leoenergy}
+\end{figure}
+
+Now, let's implement the Chan-Vese Algorithm on a texture picture of stars. As shown in Figure \ref{fig-stars}, we can see that the Chan-Vese algorithm explicitly contour the edge of each stars which shows that this algorithm works best under the situation when the object can be clearly separated from the background.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{stars.png}
+\caption{Chan-Vese Algorithm on "Stars"}
+\label{fig-stars}
+\end{figure}
+
+The energy evolution shown in Figure \ref{fig-starsenergy} also shows that Chan-Vese Algorithm can quickly reach the minimal of the energy.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{starsenergy.png}
+\caption{Energy Evolution on on "Stars"}
+\label{fig-starsenergy}
+\end{figure}
+
+### Performance on Nosiy Images
+In order to further test the practicality of this algorithm, we run some tests on noisy images, and here are the results. As shown in Figure \ref{fig-leogauss} and Figure \ref{fig-leosalt}, we added Gaussian noise and Salt \& Pepper noise separately to the image "Leonardo". 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{leogauss.png}
+\caption{Chan-Vese algorithm on "Leonardo" with Gaussian Noise}
+\label{fig-leogauss}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{leosalt.png}
+\caption{Chan-Vese algorithm on "Leonardo" with Salt \& Pepper Noise}
+\label{fig-leosalt}
+\end{figure}
+
+We can see from the results that although there are some undesirable effects due to the noise, we can still obtain the overall contour of the image. We can also see that different kinds of noise have different impacts on this algorithm, when adding Salt \& Pepper noise to the image, the final contour enclosed more noise pixels and the result is worse than adding Gaussian noise.
+
+As for the energy evolution shown in Figure \ref{fig-leonoiseenergy}, different from the energy evolution of the regular picture, we can see that the energy first go up rapidly and then go down sharply before reaching a steady state due to noise pixels. The final minimal energy of "Leonardo" with Gaussian noise is also lower than "Leonardo" with Salt \& Pepper noise.
+
+\begin{figure}[H]
+\centering
+\subfigure[Energy on "Leonardo" with Gaussian Noise]
+{
+    \begin{minipage}{0.48\textwidth}
+	\centering          
+	\includegraphics[width=\textwidth]{leogaussenergy.png}
+	\end{minipage}
+}
+\subfigure[Energy on "Leonardo" with Salt \& Pepper Noise]
+{
+    \begin{minipage}{0.48\textwidth}
+	\centering          
+	\includegraphics[width=\textwidth]{leosaltenergy.png}
+	\end{minipage}
+}
+\caption{Energy Evolution on "Leonardo" with Salt \& Pepper Noise}
+\label{fig-leonoiseenergy}
+\end{figure}
+
+
+### Effect of Varying $\mu$
+In Chan-Vese algorithm, parameter $\mu$ adjusts the length penalty, which balances between fitting the input image more accurately (smaller $\mu$) versus producing a smoother boundary (larger $\mu$) as shown in Figure \ref{fig-tim}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{timmu.png}
+\caption{Chan-Vese algorithm with different $\mu$ on "Timothee"}
+\label{fig-tim}
+\end{figure}
+
+
+###Effect of Varying $\nu$
+Parameter $nu$ sets the penalty (or reward, if $\nu < 0$) for area inside the contour. Noting that this parameter is meaningful only when there is a prescribed inside and outside of the segmentation boundary. In Figure \ref{fig-lily}, the evolution is shown with five different values of $\nu$. When $\nu$ is too negative, the boundary expands to fill the full domain, and when $\nu$ is too positive, the boundary shrinks until it vanishes.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{lilynu2.png}
+\caption{Chan-Vese algorithm with different $\nu$ on "Lily"}
+\label{fig-lily}
+\end{figure}
+
+
+### Effect of Varying Number of Initialization Curves
+For above experiments, we only used a simple circular level-set for initialization, and in this section, we tested effects of different number of curves used for initialization as shown in Figure \ref{fig-friends}. Although the final minimal tends to be the same after several iterations, the number of curves used for initialization has a great impact on the number of iterations needed to derive the contour.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{friendsk.png}
+\caption{Chan-Vese algorithm with different initialization circles on "Friends"}
+\label{fig-friends}
+\end{figure}
+
+
+## Conclusions
+### Strengths and Weaknesses
+Overall, the Chan-Vese algorithm seems to be a value tool in the area of image segmentation. It can quickly find the contour and it relies on global properties like intensities and region areas, rather than just taking into account local properties, such as gradients. However, this makes it difficult for the Chan-Vese algorithm to deal with noisy pictures. And, if we take the length of the contour and the region enclosed by the contour into consideration, these penalty or reward may have negative effects on the results which is not what we want in the first place.
+
+
+### Potential Improvements
+Many implementations of the Chan-Vese algorithm including a reinitialization step since the Chan–Vese model generally has multiple local minimizers. By using an initial boundary, specific objects in the image can be segmented. And reinitialization may need to be used to avoid including separate objects and allow it to maintain a single closed curve.
+
+Also, in order to refine the algorithm, some implementations use values that were already computed to decrease the computing time of the next values and reduce the time of computing PDE equations at each loop which my save a lot of time\cite{szpak2008further}.
+
+The Chan-Vese algorithm can also be used to segment color images which was not discussed in this paper.
+
+So if there was more time, we will focus on the three problems above and try to do more experiments to test the performance of this algorithm on different kinds of images.
