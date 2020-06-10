@@ -10,7 +10,6 @@ tags: [projects]
 In this project we analyze, specify, design, implement, document and demonstrate an online movie system. We use the classical methodology for database development. The system is implemented using a relational DBMS that supports standard SQL queries. We use your localhost MySQL Server to implement our database and the application. We use Java to implement our backend and JDBC to connect our backend to our MySQL database, we also use Swing to set up screens(desktop user interfaces).
 
 ## Screens
-
 ### Login
 A login page that all users use to log into the app. Upon successful login, the user should be taken to the appropriate functionality screen. Upon invalid login, the app should notify the user, and the user should be allowed to retry.
 ![img](https://raw.githubusercontent.com/realcyh/yuhang-chen/master/images/atl-movie-station-login.png){:width="50%"}
