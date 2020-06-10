@@ -19,7 +19,6 @@ A: They can use other ways to transport the key, like hand to each other by hand
 
 * Stream cipher: Encrypt on bit at a time.
 * Block cipher: Break plaintext into equal-size blocks and encrpt one block as a unit.
-[![1464338825-1185.jpg](https://i.postimg.cc/yYzRHF6G/1464338825-1185.jpg)](https://postimg.cc/JtP03Hk3)
 
 ## Protocol Security
  
