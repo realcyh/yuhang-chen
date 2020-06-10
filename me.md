@@ -36,7 +36,7 @@ Game AI (Python)
 
 [Analysis of Chan-Vese Segmentation (Matlab)](https://realcyh.github.io/yuhang-chen/chan-vese/)
 
-Atlanta Movie Station GUI (Java + MySQL)
+[Atlanta Movie Station GUI (Java + MySQL)](https://realcyh.github.io/yuhang-chen/atl-movie-station/)
 
 [Discrete Event Simulation (C)](https://realcyh.github.io/yuhang-chen/des/)
 
