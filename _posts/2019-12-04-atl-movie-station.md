@@ -21,7 +21,7 @@ This allows the user to navigate to the registration screen of their choosing.
 
 ###  Functionality Screens
 Different types of uses have different access to the system.
-![img](https://raw.githubusercontent.com/realcyh/yuhang-chen/master/images/atl-movie-station-funtionality-screens.png)
+![img](https://raw.githubusercontent.com/realcyh/yuhang-chen/master/images/atl-movie-station-functionality-screens.png)
 
 ### Admin Manage User
 Admin can approve “pending” or “declined” the selected users and decline “pending” the selected users.
