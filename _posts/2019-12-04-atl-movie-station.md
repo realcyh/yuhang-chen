@@ -7,7 +7,7 @@ tags: [projects]
 ---
 
 ## Overview
-In this project we analyze, specify, design, implement, document and demonstrate an online movie system. We use the classical methodology for database development. The system is implemented using a relational DBMS that supports standard SQL queries. We use your localhost MySQL Server to implement our database and the application. We use Java to implement our backend and JDBC to connect our backend to our MySQL database, we also use Swing to set up screens(desktop user interfaces).
+In this project we analyze, specify, design, implement, document and demonstrate an online movie system. We use the classical methodology for database development. The system is implemented using a relational DBMS that supports standard SQL queries. We use your localhost MySQL Server to implement our database and the application. We use Java to implement our backend and JDBC to connect our backend to our MySQL database, we also use Swing to set up screens(desktop user interfaces). Here is a [DEMO VIDEO](https://www.youtube.com/watch?v=SBEg5rZasks) of our theater/movie management system.
 
 ## Screens
 ### Login
